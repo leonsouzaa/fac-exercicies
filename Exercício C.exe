@@ -1,0 +1,27 @@
+//Crie um programa em C que:
+//Peça ao usuário um número inteiro positivo N.
+//Exiba a tabuada de multiplicação desse número, de 1 até 10.
+
+#include <stdio.h>
+
+int main() {
+    int N;
+
+    // Solicita ao usuário um número inteiro positivo
+    printf("Digite um numero inteiro positivo: ");
+    scanf("%d", &N);
+
+    // Verifica se o número é positivo
+    if (N < 0) {
+        printf("Por favor, digite um numero positivo.\n");
+        return 1;
+    }
+
+    // Exibe a tabuada de multiplicação de N de 1 a 10
+    printf("Tabuada de %d:\n", N);
+    for (int i = 1; i <= 10; i++) {
+        printf("%d x %d = %d\n", N, i, N * i);
+    }
+
+    return 0;
+}
